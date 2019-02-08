@@ -6,4 +6,5 @@ def call(String name = 'human') {
     echo "I'm asking for a new library..."
     library identifier: 'testing-pipeline-library-dynamic@crash', 
             retriever: modernSCM([$class: 'GitSCMSource', remote: 'https://github.com/escoem/testing-pipeline-library.git'])
+    sayHello ("libray")
 }
