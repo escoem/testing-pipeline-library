@@ -7,6 +7,8 @@ def call(Closure body) {
   podTemplate(label: label, containers: [
     containerTemplate(name: 'maven', image: dockerImage, ttyEnabled: true, command: 'cat')
     ]) {
-    body()
+    node {
+      body()
+    }
   }
 }
